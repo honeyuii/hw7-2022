@@ -50,13 +50,12 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
 });
 
-document.querySelector("#slider").addEventListener("input", function() {
+document.querySelector('#slider').addEventListener('input', function(e){
+	video.volume = parseFloat(e.target.value / 100);
+	document.querySelector('#volume').innerHTML = video.volume * 100 + '%';
+	console.log(e.target.value / 100);
+})
 
-	video.volume = this.value / 100;
-	updateVolume();
-	document.getElementById("volume").innerHTML = (video.volume*100)+"%";
-	console.log(video.volume);
-});
 
 ocument.querySelector('#vintage').addEventListener('click', function(){
 	video.classList.add('oldSchool');

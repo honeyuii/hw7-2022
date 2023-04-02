@@ -57,7 +57,7 @@ document.querySelector('#slider').addEventListener('input', function(e){
 })
 
 
-ocument.querySelector('#vintage').addEventListener('click', function(){
+document.querySelector('#vintage').addEventListener('click', function(){
 	video.classList.add('oldSchool');
 })
 
